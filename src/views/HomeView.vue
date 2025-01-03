@@ -1,9 +1,8 @@
 <script setup lang="ts">
-import TheWelcome from '../components/TheWelcome.vue'
+import { useSimpleStore } from '@/stores/simple'
+const simple = useSimpleStore()
 </script>
 
 <template>
-  <main>
-    <TheWelcome />
-  </main>
+  <main>Hello {{ simple.userName }}</main>
 </template>
