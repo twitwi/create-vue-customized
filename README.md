@@ -5,9 +5,24 @@ This template should help get you started developing with Vue 3 in Vite.
 Use typically with 
 
 ```
-npx degit twitwi/create-vue-customized   folder-to-create
+npx degit twitwi/create-vue-customized      folder-to-create
+# OR
+npx degit twitwi/create-vue-customized#yjs  folder-to-create
 ```
 
+Then consider modifying:
+- `git init .`
+- modifying `README.md` (remove most of it)
+- modifying the name in `package.json` (and maybe the version)
+- modifying the title in `index.html`
+- modifying the logo or its colors in `public/logo.svg`
+- (#yjs) modifying the LOCAL_STORAGE_KEY in `src/main-yjs.ts` (and/or hardcode the configuration if desired)
+
+---
+---
+---
+---
+---
 
 ## Recommended IDE Setup
 
