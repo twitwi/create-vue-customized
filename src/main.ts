@@ -5,10 +5,14 @@ import { createPinia } from 'pinia'
 
 import App from './App.vue'
 import router from './router'
+import { setupYjs } from './main-yjs'
 
 const app = createApp(App)
+const pinia = createPinia()
 
-app.use(createPinia())
+setupYjs(pinia)
+
+app.use(pinia)
 app.use(router)
 
 app.mount('#app')
