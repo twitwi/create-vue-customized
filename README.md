@@ -44,3 +44,23 @@ pnpm build
 ```sh
 pnpm lint
 ```
+
+
+---
+
+Internal, how to update this repo:
+
+~~~
+pnpm create vue@latest
+# all but testing
+# ◇  Project name (target directory):
+# │  ,,base
+# │
+# ◇  Select features to include in your project: (↑/↓ to navigate, space to select, a to toggle all, enter to confirm)
+# │  TypeScript, JSX Support, Router (SPA development), Pinia (state management), ESLint (error prevention), Prettier (code formatting)
+# │
+# ◇  Install Oxlint for faster linting? (experimental)
+# │  No
+
+meld ,,base .
+~~~
