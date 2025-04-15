@@ -2,11 +2,17 @@ import { ref } from 'vue'
 import { defineStore } from 'pinia'
 import type { Data } from '@/typing'
 
-export const useLocalStore = defineStore('local', () => {
-  // like setup() in a component
-  const userName = ref('bob')
-  return { userName }
-})
+export const useLocalStore = defineStore(
+  'local',
+  () => {
+    // like setup() in a component
+    const userName = ref('bob')
+    return { userName }
+  },
+  {
+    persist: true, // persisted in localStorage
+  },
+)
 
 export const useMainStore = defineStore(
   'main',
@@ -16,6 +22,6 @@ export const useMainStore = defineStore(
     return { data }
   },
   {
-    sharing: true,
+    sharing: true, // shared through yjs (+ local IDB)
   },
 )
