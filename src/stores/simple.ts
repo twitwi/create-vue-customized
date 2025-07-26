@@ -10,7 +10,7 @@ export const useLocalStore = defineStore(
     return { userName }
   },
   {
-    persist: true, // persisted in localStorage
+    persist: { key: 'yjsapp:local' }, // persisted in localStorage
   },
 )
 
