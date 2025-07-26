@@ -7,7 +7,7 @@ import type { Pinia } from 'pinia'
 export const SEP = '::'
 export const EG_CONFIG = `todo.com${SEP}doc${SEP}token`
 
-export const APP_LOCAL_STORAGE_KEY = 'yjsapp-config'
+export const APP_LOCAL_STORAGE_KEY = 'yjsapp:server'
 export function getOrAskConfig(LOCAL_STORAGE_KEY = APP_LOCAL_STORAGE_KEY, saveToLocalStorage = true) {
   const ASK = Symbol('ask')
 
@@ -17,11 +17,11 @@ export function getOrAskConfig(LOCAL_STORAGE_KEY = APP_LOCAL_STORAGE_KEY, saveTo
   //let default = ['TODO.com', 'todo-doc', 'todo-tok-suffix'] // TODO: server, document name, token (if any)
 
   if (LOCAL_STORAGE_KEY ?? '' !== '') {
-    if (LOCAL_STORAGE_KEY == 'yjsapp-config') {
+    if (LOCAL_STORAGE_KEY == 'yjsapp:server') {
       alert(
         'WARNING: Using default config\n\nPlease configure your app with a unique local storage key.\n\n(if not, two apps might reuse the same credentials to the same document (but treat this as different type!).',
       )
-      alert("We recommend to use a unique key, e.g. 'yjsapp-<your-app-name>', but will let you continue now.")
+      alert("We recommend to use a unique key, e.g. 'yjsapp-<your-app-name>:server', but will let you continue now.")
     }
     const local = localStorage.getItem(LOCAL_STORAGE_KEY)
     if (local) {
