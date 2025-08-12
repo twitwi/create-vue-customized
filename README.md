@@ -21,7 +21,7 @@ Then consider modifying:
 - modifying the title in `index.html`
 - modifying the logo or its colors in  `src/assets/logo.svg` (main) `public/logo.svg` (pwa)
 - (#yjs) modifying the LOCAL_STORAGE_KEY in `src/main-yjs.ts` (and/or hardcode the configuration if desired)
-- (#yjs) modifying the persist key in `src/store/simple.ts`
+- (#yjs) modifying the persist key in `src/stores/persist.ts`
 - (#pwa) modifying the information in `vite.config.ts`
 
 ---
