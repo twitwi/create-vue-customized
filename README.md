@@ -2,16 +2,16 @@
 
 This template should help get you started developing with Vue 3 in Vite.
 
-Use typically with 
+Use typically with (pnpx or npx, tiged or degit)
 
 ```
-npx degit twitwi/create-vue-customized          folder-to-create
+pnpx tiged twitwi/create-vue-customized          folder-to-create
 # OR
-npx degit twitwi/create-vue-customized#yjs      folder-to-create
+pnpx tiged twitwi/create-vue-customized#yjs      folder-to-create
 # OR
-npx degit twitwi/create-vue-customized#pwa      folder-to-create
+pnpx tiged twitwi/create-vue-customized#pwa      folder-to-create
 # OR
-npx degit twitwi/create-vue-customized#yjs+pwa  folder-to-create
+pnpx tiged twitwi/create-vue-customized#yjs+pwa  folder-to-create
 ```
 
 Then consider modifying:
