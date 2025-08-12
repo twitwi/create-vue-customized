@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { useLocalStore, useMainStore } from '@/stores/stores'
+import { useLocalStore, useMainStore } from '@/stores/persist'
 const local = useLocalStore()
 const main = useMainStore()
 </script>
