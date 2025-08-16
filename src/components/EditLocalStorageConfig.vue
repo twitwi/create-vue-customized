@@ -5,7 +5,7 @@ import { useLocalStorage } from '@vueuse/core';
 const props = defineProps({
   k: {
     type: String,
-    default: import.meta.env.VITE_LS_LOCAL_KEY as string
+    default: import.meta.env.VITE_LS_SERVER_KEY as string
   },
   placeholder: {
     type: String,
@@ -28,7 +28,7 @@ const lsvalue = useLocalStorage(props.k ?? '', '')
   <input v-if="mode === 'raw'" type="text" v-model="lsvalue" :placeholder="placeholder" />
   <details v-else-if="mode === 'details'">
     <summary>{{ summary }}</summary>
-    <EditLocalStorageConfig style="width: 100%" />
+    <EditLocalStorageConfig style="width: 100%" :k="k" :placeholder="placeholder" />
   </details>
   <div v-else>Unknown mode {{ mode }}</div>
 
