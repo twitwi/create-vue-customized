@@ -11,7 +11,7 @@ export const useLocalStore = defineStore(
     }
   },
   {
-    persist: { key: 'yjsapp:local' }, // persisted in localStorage
+    persist: { key: import.meta.env.VITE_LS_LOCAL_KEY }, // persisted in localStorage
   },
 )
 
