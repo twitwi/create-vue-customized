@@ -1,8 +1,19 @@
 <script lang="ts" setup>
-defineProps({
+
+import { useLocalStorage } from '@vueuse/core';
+
+const props = defineProps({
+  k: {
+    type: String,
+    default: import.meta.env.VITE_LS_LOCAL_KEY as string
+  },
+  placeholder: {
+    type: String,
+    default: 'config::value',
+  },
   mode: {
     type: String,
-    default: 'raw',
+    default: 'raw' as 'raw' | 'details',
   },
   summary: {
     type: String,
@@ -10,19 +21,11 @@ defineProps({
   },
 })
 
-const APP_LOCAL_STORAGE_KEY = 'config'
-const EG_CONFIG = 'config-value'
-import { computed } from 'vue'
+const lsvalue = useLocalStorage(props.k ?? '', '')
 
-const lsvalue = computed({
-  get: () => localStorage.getItem(APP_LOCAL_STORAGE_KEY) ?? '',
-  set: (value) => {
-    localStorage.setItem(APP_LOCAL_STORAGE_KEY, value);
-  },
-})
 </script>
 <template>
-  <input v-if="mode === 'raw'" type="text" v-model="lsvalue" :placeholder="EG_CONFIG" />
+  <input v-if="mode === 'raw'" type="text" v-model="lsvalue" :placeholder="placeholder" />
   <details v-else-if="mode === 'details'">
     <summary>{{ summary }}</summary>
     <EditLocalStorageConfig style="width: 100%" />
