@@ -15,19 +15,25 @@ pnpx tiged twitwi/create-vue-customized#yjs+pwa  folder-to-create
 ```
 
 Then consider modifying:
+
 - `git init .`
 - modifying `README.md` (remove most of it)
 - modifying the name in `package.json` (and maybe the version)
-- modifying the title in `index.html`
-- modifying the logo or its colors in  `src/assets/logo.svg` (main) `public/logo.svg` (pwa)
-- (#yjs) modifying the LOCAL_STORAGE_KEY in `src/main-yjs.ts` (and/or hardcode the configuration if desired)
-- (#yjs) modifying the persist key in `src/stores/persist.ts`
-- (#pwa) modifying the information in `vite.config.ts`
+- modifying informations in `.env`
+  - VITE_APP_TITLE for HTML title (tab name)
+  - VITE_LS_LOCAL_KEY for the local storage key used to store the local config
+  - (#yjs) VITE_LS_SERVER (and/or hardcode in `src/main-yjs.ts` some behavior/configuration)
+  - (#pwa) VITE_PWA_NAME, VITE_PWA_SHORT_NAME, VITE_PWA_DESCRIPTION for PWA configuration
+- modifying the logo or its colors in `src/assets/logo.svg` (main) `public/logo.svg` (pwa)
 
 ---
+
 ---
+
 ---
+
 ---
+
 ---
 
 ## Recommended IDE Setup
@@ -66,12 +72,11 @@ pnpm build
 pnpm lint
 ```
 
-
 ---
 
 Internal, how to update this repo:
 
-~~~
+```
 pnpm create vue@latest
 # all but testing
 # ◇  Project name (target directory):
@@ -84,4 +89,4 @@ pnpm create vue@latest
 # │  No
 
 meld ,,base .
-~~~
+```
