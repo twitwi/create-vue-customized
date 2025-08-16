@@ -24,6 +24,6 @@ export const useMainStore = defineStore(
     }
   },
   {
-    sharing: true, // shared through yjs (+ local IDB)
+    sharing: `${import.meta.env.VITE_YJS_STORE_PATH}`, // shared through yjs (+ local IDB)
   },
 )
