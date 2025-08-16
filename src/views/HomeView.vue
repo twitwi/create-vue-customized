@@ -1,7 +1,7 @@
 <script setup lang="ts">
 import EditLocalStorageConfig from '@/components/EditLocalStorageConfig.vue';
-import { useSimpleStore } from '@/stores/persist'
-const simple = useSimpleStore()
+import { useLocalStore } from '@/stores/persist'
+const simple = useLocalStore()
 </script>
 
 <template>

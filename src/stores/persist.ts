@@ -1,7 +1,7 @@
 import { ref } from 'vue'
 import { defineStore } from 'pinia'
 
-export const useSimpleStore = defineStore(
+export const useLocalStore = defineStore(
   'local',
   () => {
     // like setup() in a component
