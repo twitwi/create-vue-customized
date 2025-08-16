@@ -19,11 +19,12 @@ Then consider modifying:
 - `git init .`
 - modifying `README.md` (remove most of it)
 - modifying the name in `package.json` (and maybe the version)
-- modifying informations in `.env`
+- modifying information in `.env`
   - VITE_APP_TITLE for HTML title (tab name)
   - VITE_LS_LOCAL_KEY for the local storage key used to store the local config
-  - (#yjs) VITE_LS_SERVER (and/or hardcode in `src/main-yjs.ts` some behavior/configuration)
-  - (#pwa) VITE_PWA_NAME, VITE_PWA_SHORT_NAME, VITE_PWA_DESCRIPTION for PWA configuration
+  - (#yjs) VITE_LS_SERVER_KEY (and/or hardcode in `src/main-yjs.ts` some behavior/configuration)
+  - (#yjs) optionally VITE_YJS_STORE_PATH if you want to use a specific path for the store within the Y.Doc
+  - (#pwa) VITE_PWA_NAME, VITE_PWA_SHORT_NAME, VITE_PWA_DESCRIPTION, VITE_THEME_HEXCOLOR for PWA configuration
 - modifying the logo or its colors in `src/assets/logo.svg` (main) `public/logo.svg` (pwa)
 
 ---
